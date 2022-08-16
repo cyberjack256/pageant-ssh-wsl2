@@ -9,9 +9,10 @@ I use a CAC/PIV to SSH to server. On Windows I wanted to exposes a Pageant style
 ## Installing WSL2
 
 David Bombal is a professional and a champion. Big thanks for his simplistic yet sophisticated instructing style. Follow along with his video:
+
 [WSL 2: Getting started Jun 2020](https://www.youtube.com/watch?v=_fntjriRe48)
 
-Use my PowerShell to Achieve the same results via CMD. I did not use the `wsl --install` feature, as the below method works on older versions as well as 2022
+Use my PowerShell below to achieve the same results. I did not use the `wsl --install` feature, as the below method works on older versions as well as 2022
 
 ```PowerShell
 # Enable WSL
@@ -63,7 +64,7 @@ fi
 ln -s $windows_destination $linux_destination
 ```
 
-2. Add one of the following to your shell configuration (for e.g. `.bashrc` or `.zshrc`). For advanced configurations consult the documentation of your shell.
+2. Add the following to your shell configuration (for e.g. `.bashrc` or `.zshrc`). For advanced configurations consult the documentation of your shell.
 
 #### Bash/Zsh
 
