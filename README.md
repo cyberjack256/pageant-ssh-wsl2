@@ -14,15 +14,19 @@ David Bombal is a professional and a champion. Big thanks for his simplistic yet
 
 Use my PowerShell below to achieve the same results. I did not use the `wsl --install` feature, as the below method works on older versions as well as 2022
 
+**Enable WSL and VirtualMachinePlatform**
 ```PowerShell
 # Enable WSL
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 # Enable Virtual Machine Platform
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
-# Visit the following link and update the kernel https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
 ```
-Download and install Ubuntu 2204LTS for WSL
-```
+
+**Update the Kernel**
+[Update the kernel](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi)
+
+**Download and install Ubuntu 2204LTS for WSL**
+```PowerShell
 curl.exe -L -o ubuntu-2204.zip https://aka.ms/wslubuntu2204
 Expand-Archive ubuntu-2204.zip ubuntu
 $userenv = [System.Environment]::GetEnvironmentVariable("Path", "User")
@@ -30,12 +34,12 @@ $userenv = [System.Environment]::GetEnvironmentVariable("Path", "User")
 .\ubuntu\ubuntu2204.exe
 ```
 
+**Set Default WSL Version**
 ```PowerShell
 # Set the default WSL version
 wsl --set-default-version 2
 Restart-Computer
 ```
-
 
 ## How to use with WSL2
 
@@ -85,7 +89,7 @@ fi
 
 ## Troubleshooting
 
-### Smartcard is detected in Windows and WSL, but ssh-add -L returns error
+TODO:
 
 ## Credit
 
